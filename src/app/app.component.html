@@ -1,0 +1,39 @@
+<section>
+
+  <div class="container  px-0 pb-3 ">
+    <div class="bg-dark text-white  title-text d-flex px-3 pt-2">
+      <h3>Weather Forrecast</h3><button type="button" class="btn-close btn-close-white ms-auto p-2" aria-label="Close"></button>
+    </div>
+    <div class="my-3 mx-3">
+      <label for="">City</label>
+        <i class="bi bi-chevron-expand fw-bold fs-5" ></i>
+      <select  [(ngModel)]="selectedValue" class="form-select dropdown form-select-sm mb-3" aria-label=".form-select-lg example">
+        <option value="Toronto" selected>Toronto  </option>
+        <option value="Montreal">Montreal</option>
+        <option value="Calgary">Calgary</option>
+        <option value="Ottawa">Ottawa</option>
+        <option value="Edmonton">Edmonton</option>
+        <option value="Winnipeg">Winnipeg</option>
+      </select>
+    </div>
+    <div class="row">
+      <div *ngFor="let data of weatherResponce" class="col-xl  text-center">
+        <div class="date">
+          <p>{{data.datetime | date: 'EEEE'}}</p>
+          <span>{{data.datetime | date: 'MMM dd'}}</span>
+        </div>
+        <div class="">
+          <img [src]="'../assets/icons/'+ data.weather.icon+'.png'" src="../assets/icons/a01d.png" alt="wind" class="img-fluid  imgs">
+        </div>
+        <div class="temperature">
+          <p>{{data.temp}}&#8451;</p>
+        </div>
+      </div>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end me-3">
+      <button (click)="submit()" class="btns" type="button">Apply</button>
+    </div>
+  </div>
+</section>
+
+<router-outlet></router-outlet>

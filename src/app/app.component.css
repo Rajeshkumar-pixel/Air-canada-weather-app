@@ -1,0 +1,87 @@
+
+    .form-select:focus {
+      outline: 0px !important;
+      -webkit-appearance: none;
+      box-shadow: none !important;
+      border: none;
+    }
+  
+    .imgs {
+      max-width: 80px;
+    }
+  
+    label {
+      font-size: 28px;
+      font-weight: bold;
+    }
+  
+    .date p {
+      margin-bottom: 0rem;
+    }
+  
+    i {
+      position: relative;
+      left: 433px;
+      top: 44px;
+      z-index: 99;
+    }
+  
+    .dropdown {
+      background: #dfd8d8;
+      border-radius: 0;
+      font-size: 28px;
+      font-weight: normal;
+    }
+  
+    .title-text h3 {
+      font-size: 32px;
+      font-weight: bold;
+    }
+  
+    .btns {
+      border-radius: 0px;
+      background: #d10b0b;
+      color: white;
+      border: none;
+      padding: 10px 50px;
+    }
+  
+    .date {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  
+    .temperature {
+      font-size: 18px;
+      font-weight: normal;
+    }
+  
+    .btn-close {
+      opacity: 5;
+    }
+  
+    .container {
+      border: 7px solid #212529;
+      max-width: 550px;
+      margin: auto;
+      background: white;
+      margin-top: 30px;
+    }
+  
+    @media(max-width:686px) {
+  
+      .form-select {
+        font-size: 22px;
+        width: 515px;
+      }
+  
+      i {
+        left: 430px;
+        top: 43px;
+      }
+  
+      .btns {
+        margin-left: 20px;
+      }
+    }
+  
