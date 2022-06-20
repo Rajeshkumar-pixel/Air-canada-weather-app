@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { DataService } from './data.service';
 
 @Component({
@@ -7,20 +8,20 @@ import { DataService } from './data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  title = 'Weather-App';
   selectedValue='Toronto';
   weatherResponce: any;
-  constructor(private service :DataService) { }
+  constructor(private service :DataService,private ngxService: NgxUiLoaderService) { }
 
   ngOnInit() {
     this.submit()
    }
 
    submit() {
+    this.ngxService.start()
     this.service.getApi(this.selectedValue).subscribe((x:any)=> {
-
-      this.weatherResponce=x.data
-      console.log("sdsd",this.weatherResponce)
+      this.weatherResponce=x.data;
+      this.ngxService.stop()
     })
 
    }
