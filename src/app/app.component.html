@@ -1,20 +1,22 @@
 <section>
-
   <div class="container  px-0 pb-3 ">
     <div class="bg-dark text-white  title-text d-flex px-3 pt-2">
-      <h3>Weather Forrecast</h3><button type="button" class="btn-close btn-close-white ms-auto p-2" aria-label="Close"></button>
+      <h3>Weather Forecast</h3><button type="button" class="btn-close btn-close-white ms-auto p-2" aria-label="Close"></button>
     </div>
     <div class="my-3 mx-3">
-      <label for="">City</label>
+      <label for="">Select city</label>
+      <div class="city-drop">
         <i class="bi bi-chevron-expand fw-bold fs-5" ></i>
-      <select  [(ngModel)]="selectedValue" class="form-select dropdown form-select-sm mb-3" aria-label=".form-select-lg example">
-        <option value="Toronto" selected>Toronto  </option>
-        <option value="Montreal">Montreal</option>
-        <option value="Calgary">Calgary</option>
-        <option value="Ottawa">Ottawa</option>
+      <select  [(ngModel)]="selectedValue" (ngModelChange)="submit()" class="form-select dropdown form-select-sm mb-3" aria-label=".form-select-lg example">       
+        <option value="Calgary" selected>Calgary</option>
         <option value="Edmonton">Edmonton</option>
+        <option value="Montreal">Montreal</option>
+        <option value="Ottawa">Ottawa</option>
+         <option value="Toronto" >Toronto  </option>
         <option value="Winnipeg">Winnipeg</option>
       </select>
+
+      </div>
     </div>
     <div class="row">
       <div *ngFor="let data of weatherResponce" class="col-xl  text-center">
@@ -31,7 +33,7 @@
       </div>
     </div>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end me-3">
-      <button (click)="submit()" class="btns" type="button">Apply</button>
+      <button  class="btns" >Apply</button>
     </div>
   </div>
   <ngx-ui-loader></ngx-ui-loader>

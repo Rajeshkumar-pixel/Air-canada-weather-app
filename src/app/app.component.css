@@ -9,7 +9,9 @@
     .imgs {
       max-width: 80px;
     }
-  
+  .city-drop {
+    position: relative;
+  }
     label {
       font-size: 28px;
       font-weight: bold;
@@ -19,10 +21,10 @@
       margin-bottom: 0rem;
     }
   
-    i {
-      position: relative;
-      left: 433px;
-      top: 44px;
+    .city-drop i {
+      position: absolute;
+      right: 15px;
+      top: 18px;
       z-index: 99;
     }
   
@@ -49,6 +51,7 @@
     .date {
       font-size: 18px;
       font-weight: bold;
+      padding-left: 8px
     }
   
     .temperature {
@@ -62,7 +65,7 @@
   
     .container {
       border: 7px solid #212529;
-      max-width: 550px;
+      max-width: 650px;
       margin: auto;
       background: white;
       margin-top: 80px;
@@ -70,16 +73,13 @@
   
     @media(max-width:686px) {
   
+      .city-drop i {
+        top: 13px;
+      }
       .form-select {
         font-size: 22px;
-        width: 515px;
+        width: 100%;
       }
-  
-      i {
-        left: 430px;
-        top: 43px;
-      }
-  
       .btns {
         margin-left: 20px;
       }

@@ -9,7 +9,7 @@ import { DataService } from './data.service';
 })
 export class AppComponent {
   title = 'Weather-App';
-  selectedValue='Toronto';
+  selectedValue='Calgary';
   weatherResponce: any;
   constructor(private service :DataService,private ngxService: NgxUiLoaderService) { }
 
